@@ -1,0 +1,202 @@
+/*
+Project Name: Beer Book Buddy
+Author: Trevor Lazarus
+Front End Developer @GA in NYC
+*/
+header {
+	background-image: url("../assets/notebook.png");
+	background-color: rgba(149,102,70,1);
+	background-blend-mode: overlay;
+	overflow: hidden;
+}
+header a {
+	align-content: left;
+	text-align: left;
+}
+.logo {
+	float: left;
+	margin: 15px 15px 15px 15px;
+	height: auto;
+	width: auto;
+	max-width: 250px;
+}
+nav {
+	float: right;
+	margin: 25px 15px 24px 15px;
+}
+.navigation li {
+	display: inline;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	font-size: 20px;
+	margin: 0px 10px;
+}
+.navigation a:link {
+	color: rgb(0,0,0);
+}
+.navigation a:visited {
+	color: rgb(0,0,0);
+}
+.navigation a:hover {
+	color: rgb(255,255,255);
+}
+.active-nav {
+	border-bottom: solid 3px rgb(0,0,0);
+	color: rgb(255,255,255);
+}
+.quiz-body {
+	background-image: url("../images/quiz_background.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	text-align: center;
+	padding: 120px 0px;
+	min-height: 688px;
+}
+.about-book img {
+	margin: 0px 0px 20px 0px;
+	content-shadow: 0px 3px 5px rgba(0,0,0,.35);
+}
+.about-book p {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+	color: rgba(255,255,255,1);
+	max-width: 700px;
+	margin: 0 auto;
+}
+.about-book p a:link {
+	color: white;
+}
+.about-book p a:visited {
+	color: white;
+}
+.about-book p a:hover {
+	color: white;
+}
+.about-book p a:active {
+	color: white;
+}
+h2 {
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 50px;
+	color: rgb(255,255,255);
+}
+.quiz-question h2 {
+	margin-top: 170px;
+}
+.response {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-size: 18px;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px 20px;
+	margin: 20px 10px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.35);
+	display: inline;
+	border: none;
+}
+.response a:link {
+	color: rgb(0,0,0);
+}
+.response a:visited {
+	color: rgb(0,0,0);
+}
+.response a:hover {
+	color: rgb(255,255,255);
+	padding: 10px 0px;
+	background-color: rgba(0,0,0,.8);
+}
+.response a:active {
+	color: rgb(0,0,0);
+}
+footer {
+	padding: 10px 10px;
+	text-align: center;
+	background-color: rgba(0,0,0,1);
+}
+footer p {
+	color: rgb(255,255,255);
+}
+footer a:link {
+	color: white;
+}
+footer a:visited {
+	color: white;
+}
+footer a:hover {
+	color: #fdf731;
+}
+footer a:active {
+	color: white;
+}
+.destination-splash {
+	background-image: url("../images/adirondack.jpg");
+	background-size: cover;
+	overflow: hidden;
+	min-height: 688px;
+	background-position: center;
+	text-align: center;
+	padding: 200px 0px;
+}
+.destination-title {
+	margin-top: 125px;
+	text-align: center;
+	color: rgb(255,255,255);
+	padding: 20px 20px;
+	background-color: rgba(0,0,0,.5)
+}
+.destination-description {
+	background-color: rgb(0,0,0);
+	padding: 20px 40px;
+	text-align: center;
+}
+h3 {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-size: 22px;
+	font-syle: italic;
+	line-height: 30px;
+	color: rgb(255,255,255);
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.destination-details {
+	background-image: url("../assets/notebook.png");
+	background-color: rgba(149,102,70,1);
+	background-blend-mode: overlay;
+	overflow: hidden;
+}
+.destination-map {
+	float: left;
+	padding: 40px;
+}
+.destination-stats {
+	float: left;
+	padding: 40px 40px 40px 0px;
+}
+.destination-stats li {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 25px;
+}
+.stat-answer {
+	font-weight: 700;
+}
+a:link {
+	color: black;
+}
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+a {
+	text-decoration: none;
+}
+
