@@ -8,6 +8,11 @@ header {
 	background-color: rgba(149,102,70,1);
 	background-blend-mode: overlay;
 	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: 0 7px 8px rgba(0,0,0,.12);
 }
 header a {
 	align-content: left;
@@ -40,6 +45,9 @@ nav {
 .navigation a:hover {
 	color: rgb(255,255,255);
 }
+.navigation a:active {
+	color: rgb(255,255,255);
+}
 .active-nav {
 	border-bottom: solid 3px rgb(0,0,0);
 	color: rgb(255,255,255);
@@ -52,6 +60,7 @@ nav {
 	text-align: center;
 	padding: 120px 0px;
 	min-height: 688px;
+	margin-top: 70px;
 }
 .about-book img {
 	margin: 0px 0px 20px 0px;
@@ -133,14 +142,58 @@ footer a:hover {
 footer a:active {
 	color: white;
 }
+.locations-container {
+	background-image: url("../assets/notebook.png");
+	background-color: rgba(149,102,70,.5);
+	background-blend-mode: overlay;
+	margin-top: 70px;
+}
+.filters-leftside {
+	float: left;
+	padding: 30px 30px;
+	min-height: 688px;
+	min-width: 200px;
+	max-width: 270px;
+}
+h4 {
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	font-size: 20px;
+	color: rgb(0,0,0);
+	margin-bottom: 25px;
+}
+h5 {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 18px;
+	color: rgb(0,0,0);
+	clear: both;
+}
+form hr {
+	color: rgb(255,255,255);
+	background-color: rgb(255,255,255);
+	width: 50%;
+	height: 3px;
+	border: none;
+	float: left;
+	margin: 20px 0px;
+}
+form {
+	margin: 4px 0px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	font-size: 15px;
+}
 .destination-splash {
-	background-image: url("../images/adirondack.jpg");
+	background-image: url("../images/theadirondack.jpg");
 	background-size: cover;
 	overflow: hidden;
 	min-height: 688px;
 	background-position: center;
 	text-align: center;
 	padding: 200px 0px;
+	margin-top: 70px;
 }
 .destination-title {
 	margin-top: 125px;
@@ -184,6 +237,9 @@ h3 {
 	font-size: 20px;
 	line-height: 25px;
 }
+.hours-open {
+	display: inline-table;
+}
 .stat-answer {
 	font-weight: 700;
 }
@@ -199,4 +255,11 @@ a:link {
 a {
 	text-decoration: none;
 }
-
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }

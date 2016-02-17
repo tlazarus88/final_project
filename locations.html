@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Map View of All Bars">
+	<meta name="keywords" content="beer book companion brokelyn middle coupon discount dollar">
+	<meta name="author" content="Trevor Lazarus">
+	<link href='https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+	<link type="text/css"; rel="stylesheet"; href="css/normalize.css">
+	<link type="text/css"; rel="stylesheet"; href="css/reset.css">
+	<link type="text/css"; rel="stylesheet"; href="css/style.css">
+	<title>Map View</title>
+</head>
+
+<body>
+	
+	<header>
+
+		<a href="index.html"><img src="assets/logo_final.svg" class="logo"></a>
+		<nav>
+			<ul class="navigation">
+				<li class="navigation"><a href="quiz.html">Quiz</a></li>
+				<li class="navigation active-nav"><a href="locations.html">Locations</a></li>
+				<li class="navigation">Bars</li>
+			</ul>
+	
+	</header>
+	
+	<div class="locations-container clearfix">
+		<aside class="filters-leftside">
+			<h4>Select the type of bar you want</h4>
+			<form class="clearfix">
+				<h5>Food?</h5>
+				<input class="filter-value" type="radio" name="food" value="yes"> Yes<br>
+				<input class="filter-value" type="radio" name="food" value="no"> No<br>
+				<hr>
+				<h5>Happy Hour?</h5>
+				<input class="filter-value" type="radio" name="happy-hour" value="yes"> Yes<br>
+				<input class="filter-value" type="radio" name="happy-hour" value="no"> No<br>
+				<hr>
+				<h5>Vibe?</h5>
+				<input class="filter-value" type="radio" name="vibe" value="yes"> Lowkey and Chill<br>
+				<input class="filter-value" type="radio" name="vibe" value="no"> Energetic and Busy<br>
+				<hr>
+				<h5>Large Group?</h5>
+				<input class="filter-value" type="radio" name="lg-group" value="yes"> Yes<br>
+				<input class="filter-value" type="radio" name="lg-group" value="no"> No<br>
+				<hr>
+				<h5>Outdoor Seating?</h5>
+				<input class="filter-value" type="radio" name="outdoors" value="yes"> Yes<br>
+				<input class="filter-value" type="radio" name="outdoors" value="no"> No<br>
+				<hr>
+				<h5>Accepts Credit Cards?</h5>
+				<input class="filter-value" type="radio" name="ccards" value="yes"> Yes<br>
+				<input class="filter-value" type="radio" name="ccards" value="no"> No<br>			
+			</form>
+		</aside>
+		<div class="allbars-map">
+		</div>		
+	</div>
+
+	<footer>
+		<p>&copy; Not Trevor Lazarus. Content citation <a href="#">here</a>. Made in NY.</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
