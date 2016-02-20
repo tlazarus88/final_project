@@ -36,7 +36,7 @@ nav {
 	font-size: 20px;
 	margin: 0px 10px;
 }
-.navigation a:link {
+.navigation a {
 	color: rgb(0,0,0);
 }
 .navigation a:visited {
@@ -242,9 +242,6 @@ h3 {
 }
 .stat-answer {
 	font-weight: 700;
-}
-a:link {
-	color: black;
 }
 /* Box Model Hack */
 * {
