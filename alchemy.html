@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="The Adirondack Description">
+	<meta name="description" content="Alchemy Description">
 	<meta name="keywords" content="beer book companion brokelyn middle coupon discount dollar">
 	<meta name="author" content="Trevor Lazarus">
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -23,30 +23,52 @@
 			<ul class="navigation">
 				<li class="navigation"><a href="quiz.html">Quiz</a></li>
 				<li class="navigation"><a href="locations.html">Locations</a></li>
-				<li class="navigation active-nav">Bars</li>
+				<li class="navigation active-nav"><a href="bars.html" id="current-nav">Bars</a></li>
 			</ul>
 	
 	</header>
 	
-		<div class="destination-splash">
+		<div class="destination-splash clearfix">
 			<div class="destination-title">
 				<h2>Alchemy</h2>
 			</div>
+			<img src="images/alchemy.jpg" class="destination-img">
 		</div>	
 		<div class="destination-description">
 			<h3>Dedication to serving hard-to-find craft beers from New York state means all 12 rotating taps are local. The Pelzer's hot pretzels and HBH sandwiches are local, too.</h3>
 		</div>
 		<div class="destination-details">
 			<div class="destination-map">
-				<!--iframe src="https://www.google.com/maps/d/embed?mid=z4Hclt-oHv4o.k1ts5WS1Qh44" width="640" height="480"></iframe-->
+				<div id="googleMap" style="width:500px;height:380px;"></div>
 			</div>
 			<div class="destination-stats">
 				<ul>
-					<li>Food: <span class="stat-answer">Menu</span></li>
+					<li>Phone: <span class="stat-answer">(718) 871-0100</span></li>
+					<li>Website: <span class="stat-answer"><a href="http://www.theadirondackbar.com/">Here</a></span></li>
+					<li>Hours: 
+						<span class="stat-answer">
+							<table class="hours-open">
+								<tr>
+									<td>Mon-Thurs 3pm-2am</td>
+								</tr>
+								<tr>
+									<td>Fri 3pm-4am</td>
+								</tr>
+								<tr>
+									<td>Sat noon-4am</td>
+								</tr>
+								<tr>
+									<td>Sun noon-2am</td>
+								</tr>
+							</table>
+						</span></li>
+					<li>Food: <span class="stat-answer"><a href="http://www.theadirondackbar.com/food.html">Menu</a></span></li>
 					<li>Happy Hour: <span class="stat-answer">None</span></li>
-					<li>Vibe: <span class="stat-answer">Chill</span></li>
+					<li>Vibe: <span class="stat-answer">Chill</span></li>		
+					<li>Good for Groups: <span class="stat-answer">Yes</span></li>
+					<li>Outdoor Seating: <span class="stat-answer">Yes</span></li>
+					<li>Accepts Credit Cards: <span class="stat-answer">Yes</span></li>
 				</ul>
-				<div id='yelpwidget'></div>
 			</div>
 		</div>
 
@@ -54,8 +76,7 @@
 		<p>&copy; Not Trevor Lazarus. Content citation <a href="#">here</a>. Made in NY.</p>
 	</footer>
 
-	<script>(function() { var s = document.createElement("script");s.async = true;s.onload = s.onreadystatechange = function(){getYelpWidget("the-adirondack-brooklyn","300","RED","y","y","2");};s.src='http://chrisawren.com/widgets/yelp/yelpv2.js' ;var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="js/script.js"></script>
 
 </body>

@@ -1,11 +1,12 @@
-//$(document).ready(function(){
-	//var  bkgtitle = $('h2').innerHTML;
-	//var  bkgimg = ("../images/"bkgtitle".jpg");
-	//console.log('bkgtitle');
-	//console.log('bkgimg');
-var bgname;
+var coordinates
 
-$('h2').html()=bgname;
-console.log(bgname);
-
-//$('.destination-splash').css('background-image', 'url(../images/'bgname'.jpg)');
+coordinates
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);

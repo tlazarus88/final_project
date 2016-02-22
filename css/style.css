@@ -3,6 +3,9 @@ Project Name: Beer Book Buddy
 Author: Trevor Lazarus
 Front End Developer @GA in NYC
 */
+body {
+	background-color: rgb(0,0,0);
+}
 header {
 	background-image: url("../assets/notebook.png");
 	background-color: rgba(149,102,70,1);
@@ -13,6 +16,7 @@ header {
 	top: 0;
 	left: 0;
 	box-shadow: 0 7px 8px rgba(0,0,0,.12);
+	z-index: +1;
 }
 header a {
 	align-content: left;
@@ -126,6 +130,7 @@ footer {
 	padding: 10px 10px;
 	text-align: center;
 	background-color: rgba(0,0,0,1);
+	clear: both;
 }
 footer p {
 	color: rgb(255,255,255);
@@ -185,7 +190,58 @@ form {
 	font-weight: 400;
 	font-size: 15px;
 }
+.tiles-container {
+	height: 688px;
+	float: left;
+	padding: 30px;
+	/*overflow: scroll;*/
+	max-width: 930px; 
+}
+.bar-tile {
+	background-image: url("../assets/notebook.png");
+	background-color: rgba(149,102,70,1);
+	background-blend-mode: overlay;
+	margin: 0px 10px 10px 0px;
+	float: left;
+	padding: 10px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.35);
+	width: 300px;
+	height: 320px;
+	border-radius: 5px;
+}
+.tile-img {
+	width: 280px;
+	height: 200px;
+}
+.tile-title {
+	margin: 10px 0px;
+	font-weight: 700;
+	border-bottom: solid 1px rgb(255,255,255);
+	padding-bottom: 10px;
+}
+.tile-address {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 25px;
+}
+.yelp-stars {
+	display: inline;
+}
+.star-img {
+	width: 30px;
+	height: 30px;
+}
 .destination-splash {
+	height: 688px;
+	text-align: center;
+	margin-top: 70px;
+	position: relative;
+	background-size: cover;
+	overflow: hidden;
+	content-position: center;
+}
+/*.destination-splash {
 	background-image: url("../images/theadirondack.jpg");
 	background-size: cover;
 	overflow: hidden;
@@ -201,6 +257,21 @@ form {
 	color: rgb(255,255,255);
 	padding: 20px 20px;
 	background-color: rgba(0,0,0,.5)
+}*/
+.destination-img {
+	width: 100%;
+	height: auto;
+	background-position: center;
+}
+.destination-title {
+	text-align: center;
+	color: rgb(255,255,255);
+	padding: 20px 20px;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	left: 0%;
+    top: 47%;
+    width: 100%;
 }
 .destination-description {
 	background-color: rgb(0,0,0);
@@ -237,6 +308,12 @@ h3 {
 	font-size: 20px;
 	line-height: 25px;
 }
+.destination-stats a {
+	color: rgb(0,0,0);
+}
+.destination-stats a:visited {
+	color: rgb(0,0,0);
+}
 .hours-open {
 	display: inline-table;
 }
@@ -260,3 +337,9 @@ a {
      clear: both;
      height: 0;
      }
+#current-nav {
+	color: white;
+}
+/*.desktop-maxwidth {
+	max-width: 1300px;
+}/

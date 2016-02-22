@@ -11,7 +11,7 @@
 	<link type="text/css"; rel="stylesheet"; href="css/normalize.css">
 	<link type="text/css"; rel="stylesheet"; href="css/reset.css">
 	<link type="text/css"; rel="stylesheet"; href="css/style.css">
-	<title>Map View</title>
+	<title>Beer Book Bars</title>
 </head>
 
 <body>
@@ -22,8 +22,8 @@
 		<nav>
 			<ul class="navigation">
 				<li class="navigation"><a href="quiz.html">Quiz</a></li>
-				<li class="navigation active-nav"><a href="locations.html" id="current-nav">Locations</a></li>
-				<li class="navigation"><a href="bars.html">Bars</a></li>
+				<li class="navigation"><a href="locations.html">Locations</a></li>
+				<li class="navigation active-nav"><a href="bars.html" id="current-nav">Bars</a></li>
 			</ul>
 	
 	</header>
@@ -57,7 +57,30 @@
 				<input class="filter-value" type="radio" name="ccards" value="no"> No<br>			
 			</form>
 		</aside>
-		<div class="allbars-map">
+		<div class="tiles-container clearfix">
+			<div class="bar-tile adirondack-tile">
+				<img src="images/theadirondack.jpg" class="tile-img">
+				<h5 class="tile-title">The Adirondack</h5>
+				<p class="tile-address">1241 Prospect Ave, Brooklyn, NY 11218</p>
+				<div class="yelp-stars">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/half_star.svg" class="star-img">
+				</div>
+			</div>
+			<div class="bar-tile alchemy-tile">
+				<img src="images/alchemy_1.jpg" class="tile-img">
+				<h5 class="tile-title">Alchemy</h5>
+				<p class="tile-address">56 5th Ave, Brooklyn, NY 11217</p>
+				<div class="yelp-stars">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/full_star.svg" class="star-img">
+					<img src="assets/half_star.svg" class="star-img">
+				</div>
+			</div>
 		</div>		
 	</div>
 
