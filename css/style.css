@@ -270,23 +270,7 @@ a.bar-tile-link:link {
 	overflow: hidden;
 	content-position: center;
 }
-.destination-img {
-	width: 100%;
-	height: auto;
-	background-position: center;
-}
-.destination-title {
-	text-align: center;
-	color: rgb(255,255,255);
-	padding: 20px 20px;
-	background-color: rgba(0,0,0,.5);
-	position: absolute;
-	left: 0%;
-    top: 43%;
-    width: 100%;
-}
-/*.destination-splash {
-	background-image: url("../images/theadirondack.jpg");
+.destination-splash {
 	background-size: cover;
 	overflow: hidden;
 	min-height: 688px;
@@ -301,7 +285,31 @@ a.bar-tile-link:link {
 	color: rgb(255,255,255);
 	padding: 20px 20px;
 	background-color: rgba(0,0,0,.5)
-}*/
+}
+.adirondack-bkg {
+	background-image: url("../images/adirondack_1.jpg");
+}
+.alchemy-bkg {
+	background-image: url("../images/alchemy_1.jpg");
+}
+.bar-chord-bkg {
+	background-image: url("../images/bar_chord_1.jpg");
+}
+.bergn-bkg {
+	background-image: url("../images/bergn_1.jpg");
+}
+.branch-ofc-bkg {
+	background-image: url("../images/branch_ofc_1.jpg");
+}
+.building-on-bond-bkg {
+	background-image: url("../images/building_bond_2.jpg");
+}
+.catfish-bkg {
+	background-image: url("../images/catfish_1.jpg");
+}
+.coney-brewing-bkg {
+	background-image: url("../images/coney_brewing_1.jpg");
+}
 .destination-description {
 	background-color: rgb(0,0,0);
 	padding: 20px 40px;
@@ -323,9 +331,11 @@ h3 {
 	background-blend-mode: overlay;
 	overflow: hidden;
 }
-.destination-map {
+#destination-map {
 	float: left;
 	padding: 40px;
+	width: 500px;
+	height: 400px;
 }
 .destination-stats {
 	float: left;
@@ -348,6 +358,9 @@ h3 {
 }
 .stat-answer {
 	font-weight: 700;
+}
+.hours-text {
+	font-weight: 400;
 }
 /* Box Model Hack */
 * {
