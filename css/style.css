@@ -150,6 +150,9 @@ footer a:hover {
 footer a:active {
 	color: white;
 }
+.italicize {
+	font-style: italic;
+}
 .destinations-container {
 	background-image: url("../assets/notebook.png");
 	background-color: rgba(149,102,70,.5);
@@ -309,6 +312,42 @@ a.bar-tile-link:link {
 }
 .coney-brewing-bkg {
 	background-image: url("../images/coney_brewing_1.jpg");
+}
+.covenhoven-bkg {
+	background-image: url("../images/covenhoven_1.jpg");
+}
+.dean-street-bkg {
+	background-image: url("../images/dean_street_1.jpg");
+}
+.dsk-bkg {
+	background-image: url("../images/dsk_1.jpg");
+}
+.emerson-bkg {
+	background-image: url("../images/emerson_2.jpg");
+}
+.freddys-bkg {
+	background-image: url("../images/freddys_1.jpg");
+}
+.hamiltons-bkg {
+	background-image: url("../images/hamiltons_6.jpg");
+}
+.high-dive-bkg {
+	background-image: url("../images/high_dive_1.jpg");
+}
+.hollow-nickel-bkg {
+	background-image: url("../images/hollow_nickel_1.jpg");
+}
+.hope-anchor-bkg {
+	background-image: url("../images/hope_anchor_1.jpg");
+}
+.jake-walk-bkg {
+	background-image: url("../images/jake_walk_1.jpg");
+}
+.kimoto-rooftop-bkg {
+	background-image: url("../images/kimoto_rooftop_4.png-large");
+}
+.krupa-grocery-bkg {
+	background-image: url("../images/krupa_grocery_1.jpg");
 }
 .destination-description {
 	background-color: rgb(0,0,0);
