@@ -349,6 +349,27 @@ a.bar-tile-link:link {
 .krupa-grocery-bkg {
 	background-image: url("../images/krupa_grocery_1.jpg");
 }
+.lowlands-bkg {
+	background-image: url("../images/lowlands_3.jpg");
+}
+.mekelburgs-bkg {
+	background-image: url("../images/mekelburgs_2.jpg");
+}
+.midwood-flats-bkg {
+	background-image: url("../images/midwood_flats_2.jpg");
+}
+.no-seven-bkg {
+	background-image: url("../images/no_seven_1.jpg");
+}
+.robert-bar-bkg {
+	background-image: url("../images/robert_bar_1.jpg");
+}
+.saint-catherine-bkg {
+	background-image: url("../images/saint_catherine_1.jpg");
+}
+.sycamore-bkg {
+	background-image: url("../images/sycamore_2.jpg");
+}
 .destination-description {
 	background-color: rgb(0,0,0);
 	padding: 20px 40px;
