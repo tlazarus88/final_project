@@ -116,18 +116,18 @@ h2 {
 	display: inline;
 	border: none;
 }
-.response a:link {
+/*.response a:link {
 	color: rgb(0,0,0);
 }
 .response a:visited {
 	color: rgb(0,0,0);
-}
+}*/
 .response:hover {
 	background-color: rgba(0,0,0,.8);
 	content-color: ;
 	color: white;
 }
-.response:hover a {
+/*.response:hover a {
 	color: rgb(255,255,255);
 }
 .response a:active {
