@@ -150,7 +150,7 @@ h2 {
 .question-6 {
 	display: none;
 }
-.responses-2 {
+/*.responses-2 {
 	display: none;
 }
 .responses-3 {
@@ -202,6 +202,7 @@ footer a:active {
 	background-blend-mode: overlay;
 	padding-top: 70px;
 	position: relative;
+	height: 100%;
 }
 .filters-leftside {
 	float: left;

@@ -1,18 +1,63 @@
+function noDefault() {
+	$("form").on('submit', function(event){
+		event.preventDefault();
+})};
+
+/*function userSubmit() {
+	$("form").on('submit', function() {
+		str = $('#city-type').val();
+		city = $.trim(str);
+*/
 var quizQuestions = ['.question-1','.question-2','.question-3','.question-4','.question-5','.question-6'];
 
 //var quizResponses = ['.responses-1','.responses-2','.responses-3','.responses-4','.responses-5','.responses-6'];
 
 var i = 0;
 
+var food;
+
 $('.quiz-response').on('click', function () {
+	noDefault();
 	$(quizQuestions[i]).fadeOut(1000, "linear", function () {
 		i++;
-		if (i<5) {
+		//if (i<5) {
 			$(quizQuestions[i]).fadeIn(1000, "linear");
-		} else if (i=5) {
-			$(window).load("http://google.com");
-		};
+		//} else if (i=5) {
+		//	$(window).load("http://google.com");
+		//};
 	});
+});
+
+$(".question-1").on("click", ":submit", function() {
+    var food = $(this).val();
+    //alert(food);
+});
+
+$(".question-2").on("click", ":submit", function() {
+    var happyHour = $(this).val();
+    //alert(happyHour);
+});
+
+$(".question-3").on("click", ":submit", function() {
+    var vibe = $(this).val();
+    //alert(vibe);
+});
+
+$(".question-4").on("click", ":submit", function() {
+    var groupSize = $(this).val();
+    //alert(groupSize);
+});
+
+$(".question-5").on("click", ":submit", function() {
+    var outdoors = $(this).val();
+    //alert(outdoors);
+});
+
+$(".question-6").on("click", ":submit", function() {
+    var creditCard = $(this).val();
+    var arr = [ food, happyHour, vibe, groupSize, outdoors, creditCard];
+    //$.makeArray( food, happyHour, vibe, groupSize, outdoors, creditCard )
+    alert(arr);
 });
 //setup array of variables
 
