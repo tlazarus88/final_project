@@ -1,8 +1,3 @@
-function noDefault() {
-	$("form").on('submit', function(event){
-		event.preventDefault();
-})};
-
 /*function userSubmit() {
 	$("form").on('submit', function() {
 		str = $('#city-type').val();
@@ -15,46 +10,59 @@ var quizQuestions = ['.question-1','.question-2','.question-3','.question-4','.q
 var i = 0;
 
 var food;
+var happyHour;
+var vibe;
+var groupSize;
+var outdoors;
+var creditCard;
 
-$('.quiz-response').on('click', function () {
-	noDefault();
-	$(quizQuestions[i]).fadeOut(1000, "linear", function () {
+$('.response').on('click', function (e) {
+  e.preventDefault();
+		$(quizQuestions[i]).fadeOut(1000, "linear", function () {
 		i++;
-		//if (i<5) {
+		if (i<=5) {
 			$(quizQuestions[i]).fadeIn(1000, "linear");
-		//} else if (i=5) {
-		//	$(window).load("http://google.com");
-		//};
+		} else {
+			//alert(food);
+      //$(window).load("index.html");
+      //$(window).load("bars.html/?asp.'+food+'&'+happyHour+'&'+vibe+'&'+groupSize+'&'+outdoors+'&'+creditCard+'");
+		};
 	});
 });
 
 $(".question-1").on("click", ":submit", function() {
-    var food = $(this).val();
+    food = $(this).val();
     //alert(food);
+    console.log(food);
 });
 
 $(".question-2").on("click", ":submit", function() {
-    var happyHour = $(this).val();
+    happyHour = $(this).val();
     //alert(happyHour);
+    console.log(happyHour);
 });
 
 $(".question-3").on("click", ":submit", function() {
-    var vibe = $(this).val();
+    vibe = $(this).val();
     //alert(vibe);
+    console.log(vibe);
 });
 
 $(".question-4").on("click", ":submit", function() {
-    var groupSize = $(this).val();
+    groupSize = $(this).val();
     //alert(groupSize);
+    console.log(groupSize);
 });
 
 $(".question-5").on("click", ":submit", function() {
-    var outdoors = $(this).val();
+    outdoors = $(this).val();
     //alert(outdoors);
+    console.log(outdoors);
 });
 
 $(".question-6").on("click", ":submit", function() {
-    var creditCard = $(this).val();
+    creditCard = $(this).val();
+    console.log(food,happyHour,vibe,groupSize,outdoors,creditCard);
     var arr = [ food, happyHour, vibe, groupSize, outdoors, creditCard];
     //$.makeArray( food, happyHour, vibe, groupSize, outdoors, creditCard )
     alert(arr);
