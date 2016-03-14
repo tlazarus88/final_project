@@ -48,7 +48,7 @@
 					var map;
 					function init_map(){
 						var myOptions = {
-							zoom:14,
+							zoom:15,
 							center:new google.maps.LatLng(40.6466826,-73.970529),
 							mapTypeId: google.maps.MapTypeId.ROADMAP
 						};
@@ -58,8 +58,7 @@
 							position: new google.maps.LatLng(40.6466826, -73.970529)
 						});
 						infowindow = new google.maps.InfoWindow({
-							content:"<div class='scrollFix'><h5>Wheated Brooklyn</h5>905 Church Ave<br/>Brooklyn, 11218</div>",
-							hideCloseButton: true,
+							content:"<div class='scrollFix'><h5>Wheated Brooklyn</h5>905 Church Ave<br/>Brooklyn, 11218</div>"
 						});
 						google.maps.event.addListener(marker, "click", function(){
 								infowindow.open(map,marker);
