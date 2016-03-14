@@ -8,6 +8,8 @@ body {
 	background-color: rgba(0,0,0,.5);
 	background-blend-mode: overlay;
 }
+
+/* Header */
 header {
 	background-image: url("../assets/notebook.png");
 	background-color: rgba(149,102,70,1);
@@ -105,6 +107,34 @@ h2 {
 	font-size: 50px;
 	color: rgb(255,255,255);
 }
+.home-link {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-size: 18px;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px 20px;
+	margin: 20px 10px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.35);
+	display: inline;
+	border: none;
+}
+.home-link a:link {
+	color: rgb(0,0,0);
+}
+.home-link a:visited {
+	color: rgb(0,0,0);
+}
+.home-link:hover {
+	background-color: rgba(0,0,0,.8);
+	content-color: ;
+	color: white;
+}
+.home-link:hover a {
+	color: rgb(255,255,255);
+}
+.home-link a:active {
+	color: rgb(0,0,0);
+}
 .response {
 	font-family: 'Arvo', serif;
 	font-weight: 400;
@@ -116,18 +146,18 @@ h2 {
 	display: inline;
 	border: none;
 }
-/*.response a:link {
+.response a:link {
 	color: rgb(0,0,0);
 }
 .response a:visited {
 	color: rgb(0,0,0);
-}*/
+}
 .response:hover {
 	background-color: rgba(0,0,0,.8);
 	content-color: ;
 	color: white;
 }
-/*.response:hover a {
+.response:hover a {
 	color: rgb(255,255,255);
 }
 .response a:active {
@@ -148,21 +178,6 @@ h2 {
 	display: none;
 }
 .question-6 {
-	display: none;
-}
-/*.responses-2 {
-	display: none;
-}
-.responses-3 {
-	display: none;
-}
-.responses-4 {
-	display: none;
-}
-.responses-5 {
-	display: none;
-}
-.responses-6 {
 	display: none;
 }
 
@@ -201,11 +216,11 @@ footer a:active {
 	background-color: rgba(149,102,70,.5);
 	background-blend-mode: overlay;
 	padding-top: 70px;
+	padding-bottom: 30px;
 	position: relative;
-	height: 100%;
 }
 .filters-leftside {
-	float: left;
+	position: fixed;
 	padding: 30px 30px;
 	min-height: 688px;
 }
@@ -224,6 +239,21 @@ h5 {
 	color: rgb(0,0,0);
 	clear: both;
 }
+.filter-value {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 18px;
+	color: rgb(0,0,0);
+	clear: both;
+}
+.filter-value-label {
+	line-height: 20px;
+	margin: 4px 0px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	font-size: 15px;
+} 
 form hr {
 	color: rgb(255,255,255);
 	background-color: rgb(255,255,255);
@@ -240,9 +270,8 @@ form {
 	font-size: 15px;
 }
 .tiles-container {
-	float: left;
+	float: right;
 	padding: 30px;
-	overflow-y: scroll;
 }
 .bar-tile {
 	background-image: url("../assets/notebook.png");
@@ -438,16 +467,30 @@ h3 {
 	background-blend-mode: overlay;
 	object-position: center;
 }
-#destination-map {
+.destination-map {
 	float: left;
 	margin: 40px;
-	width: 500px;
+	width: 50%;
 	height: 400px;
 	background-color: #fff;
+}
+#gmap-canvas {
+	width: 100%;
+	height: 400px;
+}
+#gmap-canvas img {
+	max-width:none;
+	background:none;
+}
+.scrollFix {
+    line-height: 1.35;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .destination-stats {
 	float: left;
 	padding: 40px 40px 40px 0px;
+	width: 50%-40px;
 }
 .destination-stats li {
 	font-family: 'Roboto Slab', serif;
@@ -514,6 +557,8 @@ a {
 	}
 	.tiles-container {
 		width: 70%;
+		position: absolute;
+		margin-left: 30%;
 	}
 	.filters-leftside {
 		width: 30%;
