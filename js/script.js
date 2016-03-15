@@ -30,50 +30,94 @@ $('.response').on('click', function (e) {
 $(".question-1").on("click", ":submit", function() {
     food = $(this).val();
     localStorage.setItem('food', food);
-    //localStorage.getItem('food');
-    //alert(food);
     console.log(food);
 });
 
 $(".question-2").on("click", ":submit", function() {
     happyHour = $(this).val();
     localStorage.setItem('happyHour', happyHour);
-    //alert(happyHour);
     console.log(happyHour);
 });
 
 $(".question-3").on("click", ":submit", function() {
     vibe = $(this).val();
     localStorage.setItem('vibe', vibe);
-    //alert(vibe);
     console.log(vibe);
 });
 
 $(".question-4").on("click", ":submit", function() {
     groupSize = $(this).val();
     localStorage.setItem('groupSize', groupSize);
-    //alert(groupSize);
     console.log(groupSize);
 });
 
 $(".question-5").on("click", ":submit", function() {
     outdoors = $(this).val();
     localStorage.setItem('outdoors', outdoors);
-    //alert(outdoors);
     console.log(outdoors);
 });
 
 $(".question-6").on("click", ":submit", function() {
     creditCard = $(this).val();
-    localStorage.setItem('creditCard', creditCard);
-    console.log(food,happyHour,vibe,groupSize,outdoors,creditCard);
-    //var arr = [ food, happyHour, vibe, groupSize, outdoors, creditCard];
-    //$.makeArray( food, happyHour, vibe, groupSize, outdoors, creditCard )
-    //alert(arr);
+    localStorage.setItem('creditCard', creditCard
+    console.log(creditCard);
 });
 
+//load quiz responses
+$(function loadQuizEntries () {
+  if ($('body.bars-list').length > 0) {
+    food = localStorage.getItem('food');
+    happyHour = localStorage.getItem('happyHour');
+    vibe = localStorage.getItem('vibe');
+    groupSize = localStorage.getItem('groupSize');
+    outdoors = localStorage.getItem('outdoors');
+    creditCard = localStorage.getItem('creditCard');
+    loadFilterChecks();
+    //console.log(food,happyHour,vibe,groupSize,outdoors,creditCard);
+  }
+});
+
+//add quiz responses to filters sidebar
+function loadFilterChecks() {
+  if (food === 'yesFood') {
+    $('#yesFood').prop('checked', true);
+  } else if (food === 'noFood') {
+    $('#noFood').prop('checked', true);
+  };
+
+  if (happyHour === 'yesHh') {
+    $('#yesHh').prop('checked', true);
+  } else if (happyHour === 'noHh') {
+    $('#noHh').prop('checked', true);
+  };
+
+  if (vibe === 'lowkey') {
+    $('#lowkey').prop('checked', true);
+  } else if (vibe === 'loud') {
+    $('#loud').prop('checked', true);
+  };
+
+  if (groupSize === 'yesGroup') {
+    $('#yesGroup').prop('checked', true);
+  } else if (groupSize === 'noGroup') {
+    $('#noGroup').prop('checked', true);
+  };
+
+  if (outdoors === 'yesOutdoors') {
+    $('#yesOutdoors').prop('checked', true);
+  } else if (outdoors === 'noOutdoors') {
+    $('#noOutdoors').prop('checked', true);
+  };
+
+  if (creditCard === 'yesCredit') {
+    $('#yesCredit').prop('checked', true);
+  } else if (creditCard === 'noCredit') {
+    $('#noCredit').prop('checked', true);
+  };
+};
+
 //filter rules for "Bars" page
-$('input').on('change', function() {
+/*$('input').on('change', function() {
     if ($('#yesFood').is(':checked')) {
         $('.noOutdoors').animate({width:'toggle'},500);
         $('.yesOutdoors').fadeIn(500, "linear");
@@ -90,10 +134,23 @@ $('input').on('change', function() {
         $('.yesHh').animate({width:'toggle'},500);
         $('.noHh').fadeIn(500, "linear");
     } 
-})
+})*/
+
+//$('input').on('change', function() {
+//$('h4').on('click', function() {
+        //$('.tiles-container').filter(".noFood").animate({width:'toggle'},500);
+       // $('.bar-tile-link').filter(".yesFood").fadeOut(1000,"linear");
+        //$('.yesOutdoors').fadeIn(500, "linear");
+      //}
+//);
+
+//target each filter
+//toggle hidden class attribute
+//hide hidden class element
+//show opposite not already hidden
 
 //reset bar query parameters
-$('#bars-nav').on('click', function(e){
+/*$('#bars-nav').on('click', function(e){
   e.preventDefault();
   food = 'naFood';
   happyHour = 'naHh';
@@ -112,55 +169,5 @@ $('#bars-nav').on('click', function(e){
 
 
 });
+*/
 
-
-// creates generic map
-/*function initMap() {
-	var mapDiv = document.getElementById('destination-map');
-    var map = new google.maps.Map(mapDiv, {
-      center: {lat: 44.540, lng: -78.546},
-      zoom: 8
-    });
-}*/
-
-/**
- * @fileoverview Sample showing capturing a KML file click
- *   and displaying the contents in a side panel instead of
- *   an InfoWindow
- */
- /*
-
-var map;
-var src = 'https://developers.google.com/maps/tutorials/kml/westcampus.kml';
-
-/**
- * Initializes the map and calls the function that creates polylines.
- */
- /*
-function initialize() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: new google.maps.LatLng(-19.257753, 146.823688),
-    zoom: 2,
-    mapTypeId: google.maps.MapTypeId.TERRAIN
-  });
-  loadKmlLayer(src, map);
-}
-
-/**
- * Adds a KMLLayer based on the URL passed. Clicking on a marker
- * results in the balloon content being loaded into the right-hand div.
- * @param {string} src A URL for a KML file.
- */
- /*
-function loadKmlLayer(src, map) {
-  var kmlLayer = new google.maps.KmlLayer(src, {
-    suppressInfoWindows: true,
-    preserveViewport: false,
-    map: map
-  });
-  google.maps.event.addListener(kmlLayer, 'click', function(event) {
-    var content = event.featureData.infoWindowHtml;
-    var testimonial = document.getElementById('capture');
-    testimonial.innerHTML = content;
-  });
-}*/
