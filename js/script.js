@@ -59,7 +59,7 @@ $(".question-5").on("click", ":submit", function() {
 
 $(".question-6").on("click", ":submit", function() {
     creditCard = $(this).val();
-    localStorage.setItem('creditCard', creditCard
+    localStorage.setItem('creditCard', creditCard);
     console.log(creditCard);
 });
 
@@ -115,6 +115,41 @@ function loadFilterChecks() {
     $('#noCredit').prop('checked', true);
   };
 };
+
+$('input:radio').change( function() {
+  //food options
+  if ($('#yesFood').is(':checked')) {
+    $(".noFood").slideUp(200, function() {
+      $(".noFood").addClass("food-hidden");
+      $(".yesFood").removeClass("food-hidden"); 
+    });
+    $(".yesFood").slideDown(200).not(".food-hidden .happy-hour-hidden,.vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
+  };
+  if ($('#noFood').is(':checked')) {
+    $(".yesFood").slideUp(200, function(){
+      $(".yesFood").addClass("food-hidden");
+      $(".noFood").removeClass("food-hidden");   
+    });
+    $(".noFood").slideDown(200).not(".food-hidden .happy-hour-hidden,.vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
+  };
+  //happy hour options
+  if ($('#yesHh').is(':checked')) {
+    $(".noHh").addClass("happy-hour-hidden");
+    $(".yesHh").removeClass("happy-hour-hidden"); 
+      function again() {
+        $(".noHh").slideUp(200);
+        $(".yesHh").slideDown(200).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
+    }; 
+  };
+  if ($('#noHh').is(':checked')) {
+    $(".yesHh").addClass("happy-hour-hidden");
+    $(".noHh").removeClass("happy-hour-hidden"); 
+      function great() {
+        $(".yesHh").slideUp(200);
+        $(".noHh").slideDown(200).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
+    };
+  }
+});
 
 //filter rules for "Bars" page
 /*$('input').on('change', function() {

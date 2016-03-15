@@ -218,6 +218,7 @@ footer a:active {
 	padding-top: 70px;
 	padding-bottom: 30px;
 	position: relative;
+	/*min-height: 688px;*/
 }
 .filters-leftside {
 	position: fixed;
@@ -272,6 +273,7 @@ form {
 .tiles-container {
 	float: right;
 	padding: 30px;
+	/*min-height: 785px;*/
 }
 .bar-tile {
 	background-image: url("../assets/notebook.png");
