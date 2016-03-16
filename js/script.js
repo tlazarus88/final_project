@@ -116,8 +116,38 @@ function loadFilterChecks() {
   };
 };
 
-$('input:radio').change( function() {
-  //food options
+$('.bar-filters-button').on('click', (function(e) {
+  e.preventDefault();
+  if ($('#yesFood:checked')) {
+    $('.noFood').fadeOut(500);
+        $('.yesFood').fadeIn(500);
+
+  } else if ($('#noFood:checked')) {
+    $('.yesFood').fadeOut(500);
+    $('.noFood').fadeIn(500);
+
+  };
+  /*if ($('#yesHh:checked')) {
+    $('.noHh').fadeOut(500);
+  };
+  if ($('#noHh:checked')) {
+    $('.yesHh').fadeOut(500);
+  };
+  if ($('#lowkey:checked')) {
+    $('.loud').fadeOut(500);
+  };
+  if ($('#loud:checked')) {
+    $('.lowkey').fadeOut(500);
+  };
+  /*if ($('#yesFood').is(':checked')) {
+    $('.noFood').fadeOut(500);
+  };*/
+}));
+  
+
+
+//food options
+/*$('input[name="food"]:radio').change( function() {
   if ($('#yesFood').is(':checked')) {
     $(".noFood").slideUp(200, function() {
       $(".noFood").addClass("food-hidden");
@@ -132,24 +162,24 @@ $('input:radio').change( function() {
     });
     $(".noFood").slideDown(200).not(".food-hidden .happy-hour-hidden,.vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
   };
-  //happy hour options
+});
+//happy hour options
+$('input[name="happy-hour"]:radio').change( function() {  
   if ($('#yesHh').is(':checked')) {
-    $(".noHh").addClass("happy-hour-hidden");
-    $(".yesHh").removeClass("happy-hour-hidden"); 
-      function again() {
-        $(".noHh").slideUp(200);
-        $(".yesHh").slideDown(200).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
-    }; 
+    $(".noHh").slideUp(200, function() {
+      $(".noHh").addClass("happy-hour-hidden");
+      $(".yesHh").removeClass("happy-hour-hidden"); 
+    });
+    $(".yesHh").slideDown(200).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden"); 
   };
   if ($('#noHh').is(':checked')) {
-    $(".yesHh").addClass("happy-hour-hidden");
-    $(".noHh").removeClass("happy-hour-hidden"); 
-      function great() {
-        $(".yesHh").slideUp(200);
-        $(".noHh").slideDown(200).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
-    };
-  }
-});
+    $(".yesHh").slideUp(200);
+    $('.tiles-container .clearfix').css("height:100%");      
+    $(".noHh").slideDown(200, function(){
+      $(".yesHh").addClass("happy-hour-hidden");
+      $(".noHh").removeClass("happy-hour-hidden");}).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
+  };
+});*/
 
 //filter rules for "Bars" page
 /*$('input').on('change', function() {
