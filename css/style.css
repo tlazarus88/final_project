@@ -218,10 +218,10 @@ footer a:active {
 	background-image: url("../assets/notebook.png");
 	background-color: rgba(149,102,70,.5);
 	background-blend-mode: overlay;
-	padding-top: 70px;
-	padding-bottom: 30px;
+	margin-top: 70px;
+	margin-bottom: 30px;
 	position: relative;
-	/*min-height: 688px;*/
+	min-height: 100%;
 }
 .filters-leftside {
 	position: fixed;
