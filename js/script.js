@@ -1,4 +1,3 @@
-
 var quizQuestions = ['.question-1','.question-2','.question-3','.question-4','.question-5','.question-6'];
 
 var i = 0;
@@ -14,16 +13,16 @@ var creditCard;
 //capture click of button
 $('.response').on('click', function (e) {
   e.preventDefault();
-		//hide current question
+    //hide current question
     $(quizQuestions[i]).fadeOut(500, "linear", function () {
-		i++;
+    i++;
     //fade in new question
-		if (i<=5) {
-			$(quizQuestions[i]).fadeIn(500, "linear");
-		} else {
+    if (i<=5) {
+      $(quizQuestions[i]).fadeIn(500, "linear");
+    } else {
       window.location.href = "bars.html";
-		};
-	});
+    };
+  });
 });
 
 //capture and save quiz values
@@ -116,123 +115,47 @@ function loadFilterChecks() {
   };
 };
 
-$('.bar-filters-button').on('click', (function(e) {
-  e.preventDefault();
-  if ($('#yesFood:checked')) {
-    $('.noFood').fadeOut(500);
-        $('.yesFood').fadeIn(500);
-
-  } else if ($('#noFood:checked')) {
-    $('.yesFood').fadeOut(500);
-    $('.noFood').fadeIn(500);
-
-  };
-  /*if ($('#yesHh:checked')) {
-    $('.noHh').fadeOut(500);
-  };
-  if ($('#noHh:checked')) {
-    $('.yesHh').fadeOut(500);
-  };
-  if ($('#lowkey:checked')) {
-    $('.loud').fadeOut(500);
-  };
-  if ($('#loud:checked')) {
-    $('.lowkey').fadeOut(500);
-  };
-  /*if ($('#yesFood').is(':checked')) {
-    $('.noFood').fadeOut(500);
-  };*/
-}));
   
+//filters function
+var tiles = $('.tiles-container .bar-tile-link');
+var filters = [];
+var showTile;
+var removeFilterIndex;
 
+$('.filter-value').change(function(){
+  // console.log( $(this).val(), $(this).attr('data-remove'), filters, filters.indexOf( $(this).val()) );
 
-//food options
-/*$('input[name="food"]:radio').change( function() {
-  if ($('#yesFood').is(':checked')) {
-    $(".noFood").slideUp(200, function() {
-      $(".noFood").addClass("food-hidden");
-      $(".yesFood").removeClass("food-hidden"); 
+  // only push if it doesn't exist in the array
+  if (filters.indexOf( $(this).val()) < 0) {
+    filters.push($(this).val());
+  }
+
+  removeFilterIndex = filters.indexOf($(this).attr('data-remove'));
+  if (removeFilterIndex > -1) {
+    filters.splice(removeFilterIndex, 1);
+  }
+  //console.log(filters);
+
+  //option 1
+  //$('.tiles-container .bar-tile-link').hide();
+  $.each(tiles, function(t,tile){
+    showTile = true;
+
+    $.each(filters, function(f,filter){
+      if (!$(tile).hasClass(filter)) {
+        showTile = false;
+      }
+
+      if (f === (filters.length-1)) {
+        // console.log(showTile);
+        if (showTile) {
+          $(tile).slideDown();
+        }
+        //option 2
+         else {
+           $(tile).slideUp();
+        }
+      }
     });
-    $(".yesFood").slideDown(200).not(".food-hidden .happy-hour-hidden,.vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
-  };
-  if ($('#noFood').is(':checked')) {
-    $(".yesFood").slideUp(200, function(){
-      $(".yesFood").addClass("food-hidden");
-      $(".noFood").removeClass("food-hidden");   
-    });
-    $(".noFood").slideDown(200).not(".food-hidden .happy-hour-hidden,.vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
-  };
+  });
 });
-//happy hour options
-$('input[name="happy-hour"]:radio').change( function() {  
-  if ($('#yesHh').is(':checked')) {
-    $(".noHh").slideUp(200, function() {
-      $(".noHh").addClass("happy-hour-hidden");
-      $(".yesHh").removeClass("happy-hour-hidden"); 
-    });
-    $(".yesHh").slideDown(200).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden"); 
-  };
-  if ($('#noHh').is(':checked')) {
-    $(".yesHh").slideUp(200);
-    $('.tiles-container .clearfix').css("height:100%");      
-    $(".noHh").slideDown(200, function(){
-      $(".yesHh").addClass("happy-hour-hidden");
-      $(".noHh").removeClass("happy-hour-hidden");}).not(".food-hidden, .happy-hour-hidden, .vibe-hidden, .group-hidden, .outdoors-hidden, credit-hidden");
-  };
-});*/
-
-//filter rules for "Bars" page
-/*$('input').on('change', function() {
-    if ($('#yesFood').is(':checked')) {
-        $('.noOutdoors').animate({width:'toggle'},500);
-        $('.yesOutdoors').fadeIn(500, "linear");
-    } else if ($('#noFood').is(':checked')) {
-        $('.yesOutdoors').animate({width:'toggle'},500);
-        $('.noOutdoors').fadeIn(500, "linear");
-    } 
-})
-$('input').on('change', function() {
-    if ($('#yesHh').is(':checked')) {
-        $('.noHh').animate({width:'toggle'},500);
-        $('.yesHh').fadeIn(500, "linear");
-    } else if ($('#noHh').is(':checked')) {
-        $('.yesHh').animate({width:'toggle'},500);
-        $('.noHh').fadeIn(500, "linear");
-    } 
-})*/
-
-//$('input').on('change', function() {
-//$('h4').on('click', function() {
-        //$('.tiles-container').filter(".noFood").animate({width:'toggle'},500);
-       // $('.bar-tile-link').filter(".yesFood").fadeOut(1000,"linear");
-        //$('.yesOutdoors').fadeIn(500, "linear");
-      //}
-//);
-
-//target each filter
-//toggle hidden class attribute
-//hide hidden class element
-//show opposite not already hidden
-
-//reset bar query parameters
-/*$('#bars-nav').on('click', function(e){
-  e.preventDefault();
-  food = 'naFood';
-  happyHour = 'naHh';
-  vibe = 'naVibe';
-  groupSize = 'naGroup';
-  outdoors = 'naOutdoors';
-  creditCard = 'naCredit';
-  localStorage.setItem('food', food);
-  localStorage.setItem('happyHour', happyHour);
-  localStorage.setItem('vibe', vibe);
-  localStorage.setItem('groupSize', groupSize);
-  localStorage.setItem('outdoors', outdoors);
-  localStorage.setItem('creditCard', creditCard);
-
- // console.log(food,happyHour,vibe,groupSize,outdoors,creditCard);
-
-
-});
-*/
-
