@@ -2,6 +2,22 @@ var quizQuestions = ['.question-1','.question-2','.question-3','.question-4','.q
 
 var i = 0;
 
+// mobile filters menu
+$('.mobile-filters').click(function() {
+  $('.filters-leftside').slideToggle("fast", function(){
+    $('.unopened-filters-mobile').toggle();
+    $('.opened-filters-mobile').toggle();
+  });
+});
+
+//citations popup window
+$('#dialog-open').on('click', function() {
+  $('#window').show();
+});
+$('#dialog-close').on('click', function() {
+  $('#window').hide();
+});
+
 //setup array of variables
 var food;
 var happyHour;
@@ -114,6 +130,25 @@ function loadFilterChecks() {
     $('#noCredit').prop('checked', true);
   };
 };
+
+//clear button
+$('.clear-button').on('click', function(e) {
+  e.preventDefault();
+  food = 'naFood';
+  happyHour = 'naHh';
+  vibe = 'naVibe';
+  groupSize = 'naGroup';
+  outdoors = 'naOutdoors';
+  creditCard = 'naCredit';
+  //console.log(food,happyHour,vibe,groupSize,outdoors,creditCard);
+  $('input').prop('checked', false);
+  localStorage.setItem('food', food);
+  localStorage.setItem('happyHour', happyHour);
+  localStorage.setItem('vibe', vibe);
+  localStorage.setItem('groupSize', groupSize);
+  localStorage.setItem('outdoors', outdoors);
+  localStorage.setItem('creditCard', creditCard);
+});
 
   
 //filters function
