@@ -15,7 +15,7 @@
 	<title>Map View</title>
 </head>
 
-<body class="locations-page">
+<body class="locations-list">
 	
 	<header>
 
@@ -32,8 +32,77 @@
 	
 	<div class="body-container clearfix">
 
-	<iframe class="allbars-map"src="https://www.google.com/maps/d/embed?mid=z4Hclt-oHv4o.k1ts5WS1Qh44"></iframe>
+    <div class="destinations-container clearfix">
 
+    <!--aside class="filters-leftside">
+            <h4>Select the type of bar you want</h4>
+            <form class="clearfix">
+                <h5>Food?</h5>
+                <input class="filter-value" id="yesFood" type="radio" name="food" value="yesFood" data-remove="noFood"/> 
+                <label class="filter-value-label" for="yesFood">Yes</label><br class="filter-linebreak">
+
+                <input class="filter-value" id="noFood" type="radio" name="food" value="noFood" data-remove="yesFood"/>
+                <label class="filter-value-label" for="noFood">No</label><br> 
+
+                <hr>
+
+                <h5>Happy Hour?</h5>
+                <input class="filter-value" id="yesHh" type="radio" name="happy-hour" value="yesHh" data-remove="noHh">  
+                <label class="filter-value-label" for="yesHh">Yes</label><br class="filter-linebreak">
+
+                <input class="filter-value" id="noHh" type="radio" name="happy-hour" value="noHh" data-remove="yesHh"/> 
+                <label class="filter-value-label" for="noHh">No</label><br>
+
+                <hr>
+
+                <h5>Vibe?</h5>
+                <input class="filter-value" id="lowkey" type="radio" name="vibe" value="lowkey" data-remove="loud"/>
+                <label class="filter-value-label" for="lowkey">Lowkey and Chill</label><br class="filter-linebreak">
+
+                <input class="filter-value" type="radio" name="vibe" value="loud" data-remove="lowkey">
+                <label class="filter-value-label" for="loud">Energetic and Busy</label><br>
+                <hr>
+
+                <h5>Large Group?</h5>
+                <input class="filter-value" id="yesGroup" type="radio" name="group-size" value="yesGroup" data-remove="noGroup">
+                <label class="filter-value-label" for="yesGroup">Yes</label><br class="filter-linebreak">
+
+                <input class="filter-value" id="noGroup" type="radio" name="group-size" value="noGroup" data-remove="yesGroup">
+                <label class="filter-value-label" for="noGroup">No</label><br>
+
+                <hr>
+
+                <h5>Outdoor Seating?</h5>
+                <input class="filter-value" id="yesOutdoors" type="radio" name="outdoors" value="yesOutdoors" data-remove="noOutdoors">
+                <label class="filter-value-label" for="yesOutdoors">Yes</label><br class="filter-linebreak">
+
+                <input class="filter-value" id="noOutdoors" type="radio" name="outdoors" value="noOutdoors" data-remove="yesOutdoors">
+                <label class="filter-value-label" for="noOutdoors">No</label><br>
+                <hr>
+
+                <h5>Accepts Credit Cards?</h5>
+                <input class="filter-value" id="yesCredit" type="radio" name="credit-card" value="yesCredit" data-remove="noCredit">
+                <label class="filter-value-label" for="yesCredit">Yes</label><br class="filter-linebreak">
+
+                <input class="filter-value" id="noCredit" type="radio" name="credit-card" value="noCredit" data-remove="yesCredit">
+                <label class="filter-value-label" for="noCredit">No</label><br> 
+
+                <button class="clear-button" type="submit" name="clear-form" value="Clear Preferences">Clear Preferences</button>
+                
+            </form>
+        </aside-->
+
+        <div class="mobile-filters clearfix">
+            <div class="unopened-filters-mobile"><h4>Select the type of bar you want ▼</h4></div>
+            <div class="opened-filters-mobile"><h4>Close filters ▲ </h4>
+            </div>
+        </div>
+
+        <div class="locations-container clearfix">
+            <div id='BeerBookBars'></div>
+        </div>
+    
+    </div>
 	</div>
 
 	<div id="window">  
@@ -83,9 +152,10 @@
 	</div>
 
 	<footer class="static-bottom">
-		<p>&copy; Not Trevor Lazarus. Content citation <span id="dialog-open">here</span>. Made in NY.</p>
-	</footer>
+        <p>&copy; <a href="http://www.brokelyn.com/">Brokelyn</a>. Developed by <a href="http://www.trevorlazarus.com">Trevor Lazarus</a>. Content citation <span id="dialog-open">here</span>. Made in NY.</p>
+    </footer>
 
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZNhA-UO2M07yKZ4Khrj0OcvNEmXD6gI8&sensor=false&extension=.js'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="js/script.js"></script>
 

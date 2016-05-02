@@ -229,7 +229,12 @@ footer #dialog-open:hover {
 .italicize {
 	font-style: italic;
 }
-
+footer a:visited {
+	color: rgb(255,255,255);
+}
+footer a:hover {
+	color: #fdf731;
+}
 /* Citations Styling*/
 #window {  
     position: fixed;
@@ -294,7 +299,7 @@ footer #dialog-open:hover {
 	position: relative;
 	min-height: 100%;
 }
-.bars-list {
+.bars-list, .locations-list {
 	background-image: url("../assets/notebook.png");
 	background-color: rgba(149,102,70,.5);
 	background-blend-mode: overlay;
@@ -381,6 +386,31 @@ form {
 	margin-left: 20%;
 	/*min-height: 785px;*/
 }
+
+/* Map Styles */
+#BeerBookBars {
+    height: 610px;
+    width: 100%;
+}
+.gm-style-iw * {
+    display: block;
+    margin: 0;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+
+.locations-container {
+	float: right;
+	padding: 30px;
+	width: 100%;
+	margin-left: 10%;
+}
+
 .bar-tile {
 	background-image: url("../assets/notebook.png");
 	background-color: rgba(149,102,70,1);
@@ -714,7 +744,6 @@ a {
 	}
 	form {
 		margin: 4px 0px;
-		font-family: 'Roboto Slab', serif;
 		font-weight: 400;
 		font-size: 15px;
 	}
@@ -746,7 +775,6 @@ a {
 	}
 	form {
 		margin: 4px 0px;
-		font-family: 'Roboto Slab', serif;
 		font-weight: 400;
 		font-size: 15px;
 	}
