@@ -87,9 +87,9 @@ nav {
 	left: 50%;
 	transform: translate(-50%, 35%);
 }
-.about-book img {
+img.about-book {
 	margin: 0px 0px 20px 0px;
-	content-shadow: 0px 3px 5px rgba(0,0,0,.35);
+	box-shadow: 0px 3px 5px rgba(0,0,0,.35);
 }
 .about-book p {
 	font-family: 'Arvo', serif;
@@ -117,10 +117,12 @@ h2 {
 	font-weight: 700;
 	font-style: italic;
 	font-size: 50px;
+	line-height: 60px;
 	color: rgb(255,255,255);
 }
 .quiz-question {
 	max-width: 600px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 .home-link {
 	font-family: 'Arvo', serif;
@@ -828,7 +830,9 @@ a {
 /* small tablet/large mobile */
 @media only screen and (min-width: 321px) and (max-width: 568px) {
 	.logo {float: left; margin: 15px 0px 15px 15px; height: auto; width: auto; max-width: 250px;}
-	.book-content {transform: translate(-50%, 20%);}
+	.book-content {transform: translate(-50%, 20%); width: 100%;}
+	img.about-book {width: 90%;}
+	.about-book p {width: 90%;}
 	h4 {font-size: 16px; margin-bottom: 15px;}
 	.filter-value {font-size: 18px;}
 	.filter-value-label {line-height: 20px; margin: 4px 0px; font-size: 12px;} 
@@ -845,7 +849,7 @@ a {
 	.infowindow {width: 100%; font-size: 24px; text-align: center;}
 	.mobile-hidden {display: inline;}
 	footer {padding: 20px 40px;}
-	footer p {font-size: 20px; padding: 0px 20px;}
+	footer p {font-size: 16px; padding: 0px 20px;}
 	.quiz-content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, 5%); width: 85%; padding-top: 15%;}
 	h2 {font-size: 35px; line-height: 40px;}
 	.response {font-size: 14px; padding: 10px 20px; margin: 10px 10px; width: 150px;}
@@ -875,10 +879,11 @@ a {
 	#current-nav {border-bottom: solid 1px rgb(0,0,0);color: rgb(255,255,255);}
 	.active-nav {border-bottom: 1px;}
 	.book-content {margin-bottom: 100px;}
+	.home-link {margin-bottom: 6px;}
 	.quiz-body {margin-top: 119px; height: 100%-119px; background-height: 100%;}
 	#window {padding-bottom: 199px;}
-	.about-book p {width: 80%;}
 }
+
 /* smallest iPhone */
 @media only screen and (max-width: 320px) {
 	.logo {float: left; margin: 15px; height: auto; width: 100%; max-width: 275px;}
@@ -889,7 +894,7 @@ a {
 	.active-nav {border-bottom: 1px;}
 	.quiz-body {margin-top: 119px; height: 100%-119px; background-height: 100%;}
 	.book-content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, 5%); width: 85%;}
-	.about-book img {display: none;}
+	img.about-book {display: none;}
 	.about-book p {font-size: 16px; line-height: 20px; padding-top: 10px; }
 	.home-link {font-size: 14px; padding: 10px 20px; margin: 10px 10px; display: inline; width: 150px;}
 	.quiz-content {position: absolute; : 50%; left: 50%; transform: translate(-50%, 5%); width: 85%; padding-top: 15%;}
